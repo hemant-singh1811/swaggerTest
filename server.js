@@ -1,15 +1,9 @@
 const express = require('express')
-const cors = require("cors");
 
 const app = express();
 const swaggerJSdoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 
-app.use(
-    cors({
-      cors: "*",
-    })
-  );
 
 const options = {
     definition: {
@@ -20,7 +14,7 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:3000/'
+                url: 'http://localhost:8000/'
             }
         ]
     },
@@ -46,6 +40,6 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
-app.listen(3000, () => {  // 3000 is the port number
-    console.log('Server is running on port 3000')
+app.listen(8000, () => {  // 3000 is the port number
+    console.log('Server is running on port 8000')
 })
