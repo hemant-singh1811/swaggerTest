@@ -1,8 +1,7 @@
 const express = require('express')
-
-const app = express();
 const swaggerJSdoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
+const app = express();
 
 
 const options = {
@@ -14,7 +13,8 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:8000/'
+                url: 'http://34.72.66.239/'
+
             }
         ]
     },
